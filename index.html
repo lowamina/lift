@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>LIFT FITNESS | Luxury Fully AC Gym, Kottawa &amp; Ratmalana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--white:#ffffff; --off:#f6f6f7; --char:#1b1c20; --ink:#24262c; --muted:#6b6e78; --red:#d7262e; --red-dark:#a81b22; --line:#e6e7ea; --wa:#25d366}
+  *{box-sizing:border-box}
+  html,body{margin:0;overflow-x:clip}
+  body{font-family:'Open Sans',system-ui,sans-serif;background:var(--white);color:var(--ink);font-size:16px;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:'Montserrat',system-ui,sans-serif;font-weight:800;margin:0;line-height:1.15;color:var(--char);letter-spacing:-.01em}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  .kick{font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+  .btn{display:inline-block;padding:.9rem 1.6rem;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid var(--red);cursor:pointer;background:var(--red);color:#fff}
+  .btn:hover{background:var(--red-dark);border-color:var(--red-dark)}
+  .btn-line{background:transparent;color:var(--red)}
+  .btn-line:hover{background:var(--red);color:#fff}
+  .btn-wa{background:var(--wa);border-color:var(--wa);color:#fff;width:100%;text-align:center}
+  .btn-wa:hover{background:#1ebe5a;border-color:#1ebe5a}
+
+  .demo-banner{background:var(--char);color:#dfe0e5;font-size:.78rem;text-align:center;padding:.5rem 1rem}
+
+  /* header */
+  header{position:sticky;top:0;z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:1rem}
+  .logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+  .logo img{width:46px;height:46px;border-radius:50%;border:1px solid var(--line)}
+  .logo span{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;color:var(--char);letter-spacing:.04em}
+  nav{display:flex;gap:1.6rem;align-items:center}
+  nav a{text-decoration:none;font-family:'Montserrat',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--char)}
+  nav a:hover{color:var(--red)}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);padding:.45rem .85rem;font-family:'Montserrat',sans-serif;font-weight:700;color:var(--char);cursor:pointer}
+
+  /* hero */
+  .hero{position:relative;background:linear-gradient(110deg,#ffffff 52%,#f1f1f3 100%);padding:6.5rem 0 6rem;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(215,38,46,.08)}
+  .hero.has-img{background-image:linear-gradient(110deg,rgba(255,255,255,.95) 45%,rgba(255,255,255,.7) 100%),var(--hero-img);background-size:cover;background-position:center}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{font-size:clamp(2.8rem,6.5vw,5rem);max-width:760px;margin:.6rem 0 1rem}
+  .hero h1 span{color:var(--red)}
+  .hero p{max-width:520px;color:var(--muted);font-size:1.05rem;margin:0 0 2rem}
+  .hero .btns{display:flex;gap:.8rem;flex-wrap:wrap}
+  .badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:2.4rem}
+  .badges span{font-family:'Montserrat',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--char);border:1px solid var(--line);padding:.45rem .8rem;background:#fff}
+
+  section{padding:5.5rem 0}
+  .head{text-align:center;max-width:640px;margin:0 auto 3rem}
+  .head h2{font-size:clamp(2rem,4.4vw,3rem);margin:.5rem 0 .7rem}
+  .head p{margin:0;color:var(--muted)}
+
+  /* amenities */
+  .amen{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+  .amen div{background:var(--off);padding:1.5rem 1rem;text-align:center;border-top:3px solid var(--red)}
+  .amen b{display:block;font-family:'Montserrat',sans-serif;font-size:.92rem;color:var(--char);margin-bottom:.25rem}
+  .amen span{font-size:.84rem;color:var(--muted)}
+
+  /* branches */
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  .branch{border:1px solid var(--line);overflow:hidden;background:#fff}
+  .branch .img{aspect-ratio:16/9;background:linear-gradient(135deg,#d9dadf,#f3f3f5);position:relative}
+  .branch .img.has-img{background-size:cover;background-position:center}
+  .branch .img span{position:absolute;left:10px;bottom:10px;font-size:.7rem;background:rgba(255,255,255,.92);color:var(--char);padding:.15rem .5rem}
+  .branch .img.has-img span{display:none}
+  .branch .body{padding:1.6rem}
+  .branch h3{font-size:1.5rem;margin-bottom:.3rem}
+  .branch p{margin:0 0 1rem;color:var(--muted);font-size:.94rem}
+  .branch .btns{display:flex;gap:.6rem;flex-wrap:wrap}
+
+  .soon{background:var(--off)}
+  .soon-box{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;border:1px dashed var(--red);padding:1.8rem 2rem;background:#fff}
+  .soon-box h3{font-size:1.4rem}
+  .soon-box p{margin:.3rem 0 0;color:var(--muted)}
+
+  /* transformations */
+  .trans{background:var(--char);color:#fff}
+  .trans h2,.trans h3{color:#fff}
+  .trans .kick{color:#ff6b72}
+  .trans p{color:#c7c9d0}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+  .tile{aspect-ratio:4/5;background:linear-gradient(160deg,#2a2c33,#111216);position:relative;overflow:hidden;border:1px solid #2f3139}
+  .tile.has-img{background-size:cover;background-position:center}
+  .tile span{position:absolute;left:8px;bottom:8px;font-size:.68rem;background:rgba(0,0,0,.7);color:#fff;padding:.1rem .45rem}
+  .tile.has-img span{display:none}
+
+  /* trainers */
+  .trainers{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  .coach{border:1px solid var(--line);background:#fff}
+  .coach .ph{aspect-ratio:3/4;background:linear-gradient(170deg,#eceef2,#d6d9e0);position:relative;overflow:hidden}
+  .coach .ph.has-img{background-size:cover;background-position:center}
+  .coach .ph span{position:absolute;left:8px;bottom:8px;font-size:.66rem;background:rgba(255,255,255,.92);color:var(--char);padding:.1rem .45rem}
+  .coach .ph.has-img span{display:none}
+  .coach .cap{padding:.9rem 1rem 1.1rem}
+  .coach h3{font-size:1.05rem}
+  .coach p{margin:.2rem 0 0;color:var(--muted);font-size:.86rem}
+
+  /* join */
+  .join{background:var(--red);color:#fff}
+  .join-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+  .join h2{color:#fff;font-size:clamp(2.2rem,4.8vw,3.4rem);margin:.4rem 0 .8rem}
+  .join p{color:#ffe3e4;margin:0;max-width:460px}
+  .form{background:#fff;padding:2rem;color:var(--ink)}
+  .form h3{font-size:1.4rem;margin-bottom:1rem}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+  .field label{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .field input,.field select,.field textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid var(--line);padding:.7rem .8rem;width:100%}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--red);outline-offset:1px}
+  .sent{display:none;margin-top:.9rem;text-align:center;font-size:.9rem;color:var(--muted)}
+  .sent.show{display:block}
+  .sent a{color:var(--red);font-weight:700}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+  .info{border:1px solid var(--line);padding:2rem}
+  .info h3{font-size:1.4rem;margin-bottom:1rem}
+  .info dl{margin:0;display:grid;gap:1rem}
+  .info dt{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+  .info dd{margin:.1rem 0 0}
+  .info a{color:var(--char);font-weight:600}
+  .map{background:var(--off);display:grid;place-items:center;text-align:center;padding:2rem;min-height:260px;border:1px solid var(--line)}
+  .map p{color:var(--muted);margin:.4rem 0 1rem}
+
+  footer{background:var(--char);color:#a6a9b3;padding:2.2rem 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;align-items:center}
+  footer a{color:#fff;text-decoration:none}
+
+  .float-wa{position:fixed;right:16px;bottom:16px;z-index:19;background:var(--wa);color:#fff;text-decoration:none;padding:.8rem 1.1rem;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.04em;box-shadow:0 10px 26px rgba(0,0,0,.2)}
+
+  @media (max-width:1000px){
+    .amen{grid-template-columns:repeat(3,1fr)}
+    .trainers{grid-template-columns:1fr 1fr}
+    .join-grid,.contact-grid{grid-template-columns:1fr}
+    nav{display:none}
+    nav.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:#fff;padding:1rem 4vw 1.4rem;gap:.9rem;align-items:flex-start;border-bottom:1px solid var(--line)}
+    .menu-btn{display:block}
+  }
+  @media (max-width:640px){
+    .amen{grid-template-columns:1fr 1fr}
+    .branches,.row,.tgrid,.trainers{grid-template-columns:1fr}
+    .tgrid{grid-template-columns:1fr 1fr}
+    .hero{padding:4.5rem 0 4rem}
+    section{padding:4rem 0}
+    .form{padding:1.3rem}
+    .float-wa{font-size:.72rem;padding:.7rem .9rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">DEMO by Code.lowa. Sample offers, transformations and placeholder details. Remove this bar after approval.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="img/logo.png" alt="LIFT FITNESS logo"><span>LIFT FITNESS</span></a>
+    <nav id="nav">
+      <a href="#facilities">Facilities</a>
+      <a href="#branches">Branches</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#join">Join</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero" id="hero" data-img="hero.jpg">
+    <div class="wrap">
+      <div class="kick">Kottawa &middot; Ratmalana</div>
+      <h1>Luxury training. <span>Elevate your life.</span></h1>
+      <p>A clean, fully air-conditioned gym with certified male and female trainers. Transform your body in a space built for serious training.</p>
+      <div class="btns">
+        <a class="btn" href="#join">Book a free visit</a>
+        <a class="btn btn-line" href="#branches">Find a branch</a>
+      </div>
+      <div class="badges">
+        <span>Fully AC</span>
+        <span>Certified trainers</span>
+        <span>Hot water showers</span>
+        <span>Filtered water</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACILITIES -->
+  <section id="facilities">
+    <div class="wrap">
+      <div class="head">
+        <div class="kick">Facilities</div>
+        <h2>Everything you need, nothing you don't</h2>
+        <p>Replace this with the facilities each branch actually offers.</p>
+      </div>
+      <div class="amen">
+        <div><b>Fully AC</b><span>Cool, clean training floor</span></div>
+        <div><b>World-class equipment</b><span>Strength and cardio</span></div>
+        <div><b>Hot water showers</b><span>Ready after your session</span></div>
+        <div><b>Filtered water</b><span>Fresh drinking water</span></div>
+        <div><b>Certified trainers</b><span>Male and female coaches</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCHES -->
+  <section id="branches" style="background:var(--off)">
+    <div class="wrap">
+      <div class="head">
+        <div class="kick">Branches</div>
+        <h2>Two locations</h2>
+        <p>Choose the branch closest to you, or visit both.</p>
+      </div>
+      <div class="branches">
+        <div class="branch">
+          <div class="img" data-img="kottawa.jpg"><span>kottawa.jpg</span></div>
+          <div class="body">
+            <h3>Kottawa</h3>
+            <p>Add the full address, opening hours and the branch's own facilities here.</p>
+            <div class="btns">
+              <a class="btn btn-wa" href="#join" data-branch="Kottawa">Enquire on WhatsApp</a>
+              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=LIFT+FITNESS+Kottawa" target="_blank" rel="noopener">Map</a>
+            </div>
+          </div>
+        </div>
+        <div class="branch">
+          <div class="img" data-img="ratmalana.jpg"><span>ratmalana.jpg</span></div>
+          <div class="body">
+            <h3>Ratmalana</h3>
+            <p>Add the full address, opening hours and the branch's own facilities here.</p>
+            <div class="btns">
+              <a class="btn btn-wa" href="#join" data-branch="Ratmalana">Enquire on WhatsApp</a>
+              <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=LIFT+FITNESS+Ratmalana" target="_blank" rel="noopener">Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="soon-box" style="margin-top:1.4rem">
+        <div>
+          <h3>Next branch: coming soon</h3>
+          <p>Add the next location here when it's confirmed.</p>
+        </div>
+        <a class="btn btn-line" href="#contact">Get updates</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFORMATIONS -->
+  <section class="trans" id="results">
+    <div class="wrap">
+      <div class="head" style="color:#fff">
+        <div class="kick">Results</div>
+        <h2 style="color:#fff">Real transformations</h2>
+        <p>Share only photos members have approved. Add their names only with permission.</p>
+      </div>
+      <div class="tgrid">
+        <div class="tile" data-img="result-1.jpg"><span>result-1.jpg</span></div>
+        <div class="tile" data-img="result-2.jpg"><span>result-2.jpg</span></div>
+        <div class="tile" data-img="result-3.jpg"><span>result-3.jpg</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section id="trainers">
+    <div class="wrap">
+      <div class="head">
+        <div class="kick">Trainers</div>
+        <h2>Certified coaches</h2>
+        <p>Add real trainer photos and names with their permission.</p>
+      </div>
+      <div class="trainers">
+        <div class="coach"><div class="ph" data-img="trainer-1.jpg"><span>trainer-1.jpg</span></div><div class="cap"><h3>Trainer name</h3><p>Strength coach</p></div></div>
+        <div class="coach"><div class="ph" data-img="trainer-2.jpg"><span>trainer-2.jpg</span></div><div class="cap"><h3>Trainer name</h3><p>Women's training</p></div></div>
+        <div class="coach"><div class="ph" data-img="trainer-3.jpg"><span>trainer-3.jpg</span></div><div class="cap"><h3>Trainer name</h3><p>Body transformation</p></div></div>
+        <div class="coach"><div class="ph" data-img="trainer-4.jpg"><span>trainer-4.jpg</span></div><div class="cap"><h3>Trainer name</h3><p>Beginner programmes</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section class="join" id="join">
+    <div class="wrap join-grid">
+      <div>
+        <div class="kick" style="color:#fff;opacity:.9">Join</div>
+        <h2>Start your transformation</h2>
+        <p>Tell us your branch and goal. We reply on WhatsApp to arrange a free visit or trial.</p>
+      </div>
+      <form class="form" id="joinForm">
+        <h3>Enquiry</h3>
+        <div class="row">
+          <div class="field"><label for="name">Name</label><input id="name" placeholder="Full name" required></div>
+          <div class="field"><label for="branch">Branch</label>
+            <select id="branch"><option>Kottawa</option><option>Ratmalana</option><option>Not sure</option></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="goal">Goal</label>
+            <select id="goal"><option>Build strength</option><option>Lose weight</option><option>Get fit</option><option>Other</option></select></div>
+          <div class="field"><label for="trainer">Trainer</label>
+            <select id="trainer"><option>No preference</option><option>Male trainer</option><option>Female trainer</option></select></div>
+        </div>
+        <button class="btn btn-wa" type="submit">Send on WhatsApp</button>
+        <div class="sent" id="sent">Tap to send: <a id="waLink" target="_blank" rel="noopener">Open WhatsApp</a></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="info">
+        <h3>Contact</h3>
+        <dl>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/94775522287" target="_blank" rel="noopener">+94 77 552 2287</a></dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/liftfitnesslk" target="_blank" rel="noopener">@liftfitnesslk</a></dd></div>
+          <div><dt>Hours</dt><dd>Add your opening hours for each branch here</dd></div>
+          <div><dt>Careers</dt><dd>Add open positions here, if you're hiring</dd></div>
+        </dl>
+      </div>
+      <div class="map">
+        <div>
+          <div class="kick">Find us</div>
+          <p>Kottawa and Ratmalana. Add your map pins here.</p>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=LIFT+FITNESS+Sri+Lanka" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:.6rem"><img src="img/logo.png" alt="" style="width:30px;height:30px;border-radius:50%">&copy; LIFT FITNESS &middot; Exclusive fitness club</div>
+    <div><a href="https://www.instagram.com/liftfitnesslk" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+</footer>
+
+<a class="float-wa" id="floatWa" href="https://wa.me/94775522287" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+/* ---- Photo slots: uses img/<name> if it exists ---- */
+(function(){
+  var hero = document.getElementById('hero');
+  var hp = new Image();
+  hp.onload = function(){ hero.style.setProperty('--hero-img','url("img/hero.jpg")'); hero.classList.add('has-img'); };
+  hp.src = 'img/hero.jpg';
+})();
+document.querySelectorAll('[data-img]').forEach(function(el){
+  if (el.id === 'hero') return;
+  var src = 'img/' + el.getAttribute('data-img');
+  var p = new Image();
+  p.onload = function(){
+    el.style.backgroundImage = 'url("'+src+'")';
+    el.classList.add('has-img');
+    if (el.parentElement && el.parentElement.classList.contains('coach')) el.parentElement.classList.add('has-img');
+  };
+  p.src = src;
+});
+
+/* ---- WhatsApp link builder ---- */
+var WA = '94775522287';
+function setLink(text){
+  var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text);
+  document.getElementById('waLink').href = url;
+  document.getElementById('sent').classList.add('show');
+  document.getElementById('floatWa').href = url;
+  return url;
+}
+
+/* ---- Branch buttons pre-fill the branch dropdown ---- */
+document.querySelectorAll('[data-branch]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.getElementById('branch').value = btn.getAttribute('data-branch');
+  });
+});
+
+/* ---- Enquiry form ---- */
+document.getElementById('joinForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var text = 'Hi LIFT FITNESS, I am ' + document.getElementById('name').value.trim() +
+    '.\nBranch: ' + document.getElementById('branch').value +
+    '\nGoal: ' + document.getElementById('goal').value +
+    '\nTrainer: ' + document.getElementById('trainer').value;
+  setLink(text);
+});
+
+/* ---- Mobile menu ---- */
+document.getElementById('menuBtn').addEventListener('click', function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+</script>
+</body>
+</html>
